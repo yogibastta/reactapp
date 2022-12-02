@@ -1,9 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { TextForm } from './TextForm';
+import { About } from './About';
+
+
 export const Navbar = (props) => {
+
+  
   return (
     
+<>
 <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
   <a className="navbar-brand" href="#">{props.title}</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,13 +21,11 @@ export const Navbar = (props) => {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
-        <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
+        <Link to="/" className="nav-link" href="/">Home <span className="sr-only">(current)</span></Link>
       </li>
+     
       <li className="nav-item">
-        <a className="nav-link" href="/">Link</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="/">{props.alt}</a>
+        <Link to="/About" className="nav-link" href="/">{props.alt}</Link>
       </li>
       
     </ul>
@@ -33,16 +39,14 @@ export const Navbar = (props) => {
 </nav>
 
 
+
+
+    </>
+
   )
 }
 
 
-Navbar.prototype = {
-    title: PropTypes.string,
-    alt : PropTypes.string
-}
 
-Navbar.defaultProps = {
-    title: 'Hello Defult',
-    alt: 'Default About'
-}
+
+
