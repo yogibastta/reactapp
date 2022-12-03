@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { TextForm } from './TextForm';
 import { About } from './About';
+import { TextColor } from './TextColor';
+
 
 
 export const Navbar = (props) => {
@@ -26,6 +28,9 @@ export const Navbar = (props) => {
      
       <li className="nav-item">
         <Link to="/About" className="nav-link" href="/">{props.alt}</Link>
+      </li>
+      <li className="nav-item">
+        <Link to="/TextColor" className="nav-link" href="/">TextColor</Link>
       </li>
       
     </ul>
