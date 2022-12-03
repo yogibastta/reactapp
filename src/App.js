@@ -8,7 +8,6 @@ import { Navbar } from './componment/Navbar';
 import { About } from './componment/About';
 import { useState } from 'react';
 import { Alert } from './componment/Alert';
-import { TextColor } from './componment/TextColor';
 
 
 function App() {
@@ -53,7 +52,6 @@ function App() {
       <Routes>
         <Route path='/' element={<TextForm showAlert={showAlert} heading="Our Form" mode={mode}/>}></Route>
         <Route path='/About' element={<About mode={mode} />}></Route>
-        <Route path='/TextColor' element={<TextColor/>}></Route>
       </Routes>
      </div>
      
